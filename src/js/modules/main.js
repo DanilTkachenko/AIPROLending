@@ -1,4 +1,8 @@
 // <-- show menu -->
+import Swiper from 'swiper/bundle';
+
+export function main () {
+
 const navMenuEl = document.querySelector("#nav-menu");
 const navToggleEl = document.querySelector("#nav-toggle");
 const navCloseEl = document.querySelector("#nav-close");
@@ -164,3 +168,5 @@ questionsElems.forEach((elem, i) => {
 		}
 	});
 });
+
+}
