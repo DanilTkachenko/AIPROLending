@@ -123,7 +123,7 @@ const swiperBenefits = new Swiper(".benefit__swiper", {
 const flippedButtonEl = document.querySelector(".flip-button");
 
 flippedButtonEl.addEventListener("click", function () {
-	this.closest(".card").classList.toggle("flipped");
+	this.closest(".product__card-container").classList.toggle("flipped");
 });
 
 // <-- accordion faq -->
