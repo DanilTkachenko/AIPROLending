@@ -93,7 +93,6 @@ function scrollHandler() {
 			: sectionClass.classList.remove("active-link");
 	});
 }
-
 // <-- swiper benefits -->
 const swiperBenefits = new Swiper(".benefit__swiper", {
 	loop: true,
