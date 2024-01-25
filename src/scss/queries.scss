@@ -486,14 +486,14 @@
 		display: none;
 	}
 	.swiper-button-next {
-		:after {
+		&:after {
 			font-size: 3rem;
 			position: absolute;
 			right: 6rem;
 		}
 	}
 	.swiper-button-prev {
-		:after {
+		&:after {
 			font-size: 3rem;
 			position: absolute;
 			left: 6rem;

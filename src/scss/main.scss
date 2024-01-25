@@ -484,14 +484,14 @@ img {
 }
 
 .swiper-button-prev {
-	:after {
+	&:after {
 		color: var(--color-title);
 		font-size: 2rem;
 	}
 }
 
 .swiper-button-next {
-	:after {
+	&:after {
 		color: var(--color-title);
 		font-size: 2rem;
 	}
