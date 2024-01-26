@@ -121,10 +121,15 @@ const swiperBenefits = new Swiper(".benefit__swiper", {
 
 // <-- flip product card -->
 const flippedButtonEl = document.querySelector(".flip-button");
+const backButtonEl = document.querySelector(".back-button");
 
 flippedButtonEl.addEventListener("click", function () {
 	this.closest(".product__card-container").classList.toggle("flipped");
 });
+
+backButtonEl.addEventListener('click', function ()  {
+	this.closest('.product__card-container').classList.toggle('flipped');
+})
 
 // <-- accordion faq -->
 const questionsElems = document.querySelectorAll(".faq__question");

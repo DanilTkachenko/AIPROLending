@@ -61,8 +61,8 @@
 		top: 73rem;
 		left: 17rem;
 	}
-	.card {
-		.back {
+	.product__card-container {
+		.product__card-back {
 			padding-bottom: 1rem;
 		}
 	}
@@ -77,7 +77,7 @@
 			padding: 0 0.5rem;
 		}
 	}
-	.card__discount {
+	.product__card-discount {
 		font-size: var(--font-size-small);
 		font-weight: var(--font-semi-bold);
 	}
@@ -89,7 +89,7 @@
 		font-size: var(--font-size-smaller);
 		font-weight: var(--font-regular);
 	}
-	.back {
+	.product__card-back {
 		.card__button-main {
 			font-size: var(--font-size-smaller);
 			text-align: center;

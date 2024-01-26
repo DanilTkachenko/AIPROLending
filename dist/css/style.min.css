@@ -1790,12 +1790,12 @@ img {
   font-weight: var(--font-regular);
 }
 
-.card__profit {
+.product__card-profit {
   margin-bottom: 0.5rem;
   color: var(--color-text);
   text-align: center;
 }
-.card__profit span {
+.product__card-profit span {
   color: hsl(29, 95%, 56%);
   font-weight: var(--font-medium);
   text-decoration: line-through;
@@ -1874,6 +1874,10 @@ img {
 .card__button-second:hover {
   transform: translateY(-2px);
   box-shadow: 0 1px 16px hsla(200, 75%, 51%, 0.4);
+}
+
+.back-button {
+  margin-top: 10px;
 }
 
 .card__divider {
@@ -2233,7 +2237,7 @@ input[name=question] + .collapsible {
     top: 73rem;
     left: 17rem;
   }
-  .card .back {
+  .product__card-container .product__card-back {
     padding-bottom: 1rem;
   }
   .product__container {
@@ -2245,7 +2249,7 @@ input[name=question] + .collapsible {
   .product__tabs-months li {
     padding: 0 0.5rem;
   }
-  .card__discount {
+  .product__card-discount {
     font-size: var(--font-size-small);
     font-weight: var(--font-semi-bold);
   }
@@ -2257,7 +2261,7 @@ input[name=question] + .collapsible {
     font-size: var(--font-size-smaller);
     font-weight: var(--font-regular);
   }
-  .back .card__button-main {
+  .product__card-back .card__button-main {
     font-size: var(--font-size-smaller);
     text-align: center;
   }
