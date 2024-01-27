@@ -138,33 +138,42 @@ function clearActiveClasses () {
 
 // <-- product card logic -->
 
+<<<<<<< HEAD
 const selectMonth = document.querySelectorAll('.products__tabs-months li');
 const price = document.querySelector('.products__price-currency');
 const discount = document.querySelector('.products__card-discount');
 const cardProfit = document.querySelector('.products__card-profit');
 const cardPeople = document.querySelector('.products__people-select');
 const currency = document.querySelector('.products__tabs-currency');
+=======
+const selectMonth = document.querySelectorAll('.product__tabs-months li');
+const price = document.querySelector('.price__currency');
+const discount = document.querySelector('.product__card-discount');
+const cardProfit = document.querySelector('.product__card-profit');
+const cardPeople = document.querySelector('.card__people-select');
+// const currency = document.querySelector('.product__tabs-currency');
+>>>>>>> 24180bb6272e1cdfb94111308b83ea11f7aab376
 
 const monthsSelect = {
 	oneMonth: {
 		currency: {
-			DOLLARS: ['$15','$20','$27'],
-			EUR: ['€14','€19','€25'],
-			UAH: ['₴567','₴756','₴1 020'],
+			dollar: ['$15', '$20', '$27'],
+			eur: ['€14', '€19', '€25'],
+			uah: ['₴567', '₴756', '₴1 020'],
 		},
 		discount: false,
-		price: ['$15','$20','$27'],
+		price: ['$15', '$20', '$27'],
 		amountOfMonth: '1 month',
 		numberOfPeople: ['1-2', '3-4', '5-9'],
 	},
 
 	threeMonths: {
 		currency: {
-			DOLLARS: ['$40','$55','$71'],
-			EUR: ['€37','€50','€65'],
-			UAH: ['₴1513','₴2081','₴2686'],
+			dollar: ['$40', '$55', '$71'],
+			eur: ['€37', '€50', '€65'],
+			uah: ['₴1513', '₴2081', '₴2686'],
 		},
-		price: ['$40','$55','$71'],
+		price: ['$40', '$55', '$71'],
 		amountOfMonth: '3 months',
 		discount: ['-11%','-8%','-12.5%'],
 		cardProfit: `<span>$60</span> $165 for 3 months`,
@@ -172,11 +181,11 @@ const monthsSelect = {
 	},
 
 	sixMonths: {
-		currency: {
-			DOLLARS: ['$40','$55','$71'],
-			EUR: ['€37','€50','€65'],
-			UAH: ['₴1513','₴2081','₴2686'],
-		},
+		// currency: {
+		// 	dollar: ['$40', '$55', '$71'],
+		// 	eur: ['€37', '€50', '€65'],
+		// 	uah: ['₴1513','₴2081','₴2686'],
+		// },
 		price: ['$75','$105','$136'],
 		amountOfMonth: '6 months',
 		discount: ['-25%','-30%','-32.5%'],
@@ -185,24 +194,24 @@ const monthsSelect = {
 	},
 
 	oneYear: {
-		currency: {
-			DOLLARS: ['$40','$55','$71'],
-			EUR: ['€37','€50','€65'],
-			UAH: ['₴1513','₴2081','₴2686'],
-		},
+		// currency: {
+		// 	dollar: ['$40','$55','$71'],
+		// 	eur: ['€37','€50','€65'],
+		// 	uah: ['₴1513','₴2081','₴2686'],
+		// },
 		price: ['$100','$150','$200'],
 		discount: false,
 		amountOfMonth: '1 year',
-		cardProfit: `<span>$60</span> $165 for 3 months`,
+		cardProfit: `<span>$180</span> $165 for 3 months`,
 		numberOfPeople: ['1-2', '3-4', '5-9'],
 	}
 
 }
 
-const oneMonth = monthsSelect.oneMonth;
-const threeMonths = monthsSelect.threeMonths;
-const sixMonths = monthsSelect.sixMonths;
-const oneYear = monthsSelect.oneYear;
+const {oneMonth} = monthsSelect;
+const {threeMonths} = monthsSelect;
+const {sixMonths} = monthsSelect;
+const {oneYear} = monthsSelect;
 
 function numberOfPeople(month) {
 	cardPeople.addEventListener('change', () => {
@@ -227,25 +236,48 @@ function numberOfPeople(month) {
 			default:
 				break;
 		}
+
 	})
 }
 
-numberOfPeople(monthsSelect.threeMonths);
+function checkPeople(m) {
+  const selectedValue = cardPeople.value;
+
+  switch (selectedValue) {
+    case '1-2':
+      price.textContent = m.price[0];
+      break;
+
+    case '3-4':
+      price.textContent = m.price[1];
+      break;
+
+    case '5-9':
+      price.textContent = m.price[2];
+      break;
+
+    default:
+      break;
+  }
+	return price.textContent;
+}
+
+numberOfPeople(threeMonths);
 
 function handleSelectClick(e) {
 	const selectData = e.target.innerText;
 
 	switch (selectData) {
 		case oneMonth.amountOfMonth:
-			price.textContent = oneMonth.price[1]
+			price.innerHTML = checkPeople(oneMonth);
 			discount.innerHTML = '' ;
 			discount.classList.remove('products__card-discount') ;
 			cardProfit.innerHTML = '';
-			numberOfPeople(oneMonth);
+			numberOfPeople(oneMonth)
 			break;
 
 		case threeMonths.amountOfMonth:
-			price.textContent = threeMonths.price[1]
+			price.innerHTML = checkPeople(threeMonths);
 			discount.innerHTML = threeMonths.discount[1] ;
 			discount.classList.add('products__card-discount');
 			cardProfit.innerHTML = threeMonths.cardProfit;
@@ -253,7 +285,7 @@ function handleSelectClick(e) {
 			break;
 
 		case sixMonths.amountOfMonth:
-			price.textContent = sixMonths.price[1]
+			price.innerHTML = checkPeople(sixMonths);
 			discount.innerHTML = sixMonths.discount[1] ;
 			discount.classList.add('products__card-discount');
 			cardProfit.innerHTML = sixMonths.cardProfit;
@@ -261,11 +293,11 @@ function handleSelectClick(e) {
 			break;
 
 		case oneYear.amountOfMonth:
-			price.textContent = oneYear.price[1]
+			price.innerHTML = checkPeople(oneYear);
 			discount.innerHTML = '' ;
 			discount.classList.remove('products__card-discount') ;
 			cardProfit.innerHTML = '';
-			numberOfPeople(oneYear);
+			numberOfPeople(oneYear)
 			break;
 
 			default:
@@ -278,7 +310,6 @@ function handleSelectClick(e) {
 for (const selected of selectMonth) {
 	selected.addEventListener('click', handleSelectClick);
 }
-
 
 // <-- flip product card -->
 const flippedButtonEl = document.querySelector(".front-button");
