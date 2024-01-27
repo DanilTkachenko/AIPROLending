@@ -1,0 +1,36 @@
+:root {
+	--header-height: 3.5rem;
+	--color-main: hsl(200, 75%, 51%);
+	--color-title: hsl(0, 0%, 95%);
+	--color-text: hsl(0, 0%, 70%);
+	--color-text-light: hsl(0, 0%, 60%);
+	--color-body: hsl(0, 0%, 11%);
+	--color-nav: hsl(0, 0%, 15%);
+	--color-container: hsl(0, 0%, 18%);
+	--font-body: "Poppins", sans-serif;
+	--font-second: "Montserrat", sans-serif;
+	--font-size-biggest: 2.75rem;
+	--font-size-h1: 1.5rem;
+	--font-size-h2: 1.25rem;
+	--font-size-h3: 1rem;
+	--font-size-normal: 0.938rem;
+	--font-size-small: 0.813rem;
+	--font-size-smaller: 0.75rem;
+	--font-regular: 400;
+	--font-medium: 500;
+	--font-semi-bold: 600;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+}
+
+@media screen and (min-width: 1152px) {
+	:root {
+		--font-size-biggest: 5.5rem;
+		--font-size-h1: 2.5rem;
+		--font-size-h2: 1.5rem;
+		--font-size-h3: 1.25rem;
+		--font-size-normal: 1rem;
+		--font-size-small: 0.875rem;
+		--font-size-smaller: 0.813rem;
+	}
+}

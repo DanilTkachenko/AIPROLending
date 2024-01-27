@@ -58,8 +58,8 @@ window.addEventListener("scroll", headerHandler);
 function headerHandler() {
 	const headerEl = document.querySelector("#header");
 	this.scrollY >= 50
-		? headerEl.classList.add("blur-header")
-		: headerEl.classList.remove("blur-header");
+		? headerEl.classList.add("header_blur")
+		: headerEl.classList.remove("header_blur");
 }
 
 // <-- show scroll up tooltip -->
@@ -89,12 +89,12 @@ function scrollHandler() {
 		);
 
 		scrollDown > sectionTop && scrollDown <= sectionTop + sectionHeight
-			? sectionClass.classList.add("active-link")
-			: sectionClass.classList.remove("active-link");
+			? sectionClass.classList.add("nav__link_active")
+			: sectionClass.classList.remove("nav__link_active");
 	});
 }
 // <-- swiper benefits -->
-const swiperBenefits = new Swiper(".benefit__swiper", {
+const swiperBenefits = new Swiper(".benefits__swiper", {
 	loop: true,
 	grabCursor: true,
 	slidesPerView: 1.5,
@@ -120,30 +120,30 @@ const swiperBenefits = new Swiper(".benefit__swiper", {
 });
 
 // <-- product-tabs logic -->
-const tabMonth = document.querySelectorAll('.product__tabs-months li');
+const tabMonth = document.querySelectorAll('.products__tabs-months li');
 
 for (const months of tabMonth) {
 		months.addEventListener('click', (event) => {
 			const monthCount = event.target;
 				clearActiveClasses();
-				monthCount.classList.add('product__tab-month-active');
+				monthCount.classList.add('products__tab-month-active');
 		})
 }
 
 function clearActiveClasses () {
 	tabMonth.forEach((tabs) => {
-		tabs.classList.remove('product__tab-month-active')
+		tabs.classList.remove('products__tab-month-active')
 	})
 }
 
 // <-- product card logic -->
 
-const selectMonth = document.querySelectorAll('.product__tabs-months li');
-const price = document.querySelector('.price__currency');
-const discount = document.querySelector('.product__card-discount');
-const cardProfit = document.querySelector('.product__card-profit');
-const cardPeople = document.querySelector('.card__people-select');
-const currency = document.querySelector('.product__tabs-currency');
+const selectMonth = document.querySelectorAll('.products__tabs-months li');
+const price = document.querySelector('.products__price-currency');
+const discount = document.querySelector('.products__card-discount');
+const cardProfit = document.querySelector('.products__card-profit');
+const cardPeople = document.querySelector('.products__people-select');
+const currency = document.querySelector('.products__tabs-currency');
 
 const monthsSelect = {
 	oneMonth: {
@@ -239,7 +239,7 @@ function handleSelectClick(e) {
 		case oneMonth.amountOfMonth:
 			price.textContent = oneMonth.price[1]
 			discount.innerHTML = '' ;
-			discount.classList.remove('product__card-discount') ;
+			discount.classList.remove('products__card-discount') ;
 			cardProfit.innerHTML = '';
 			numberOfPeople(oneMonth);
 			break;
@@ -247,7 +247,7 @@ function handleSelectClick(e) {
 		case threeMonths.amountOfMonth:
 			price.textContent = threeMonths.price[1]
 			discount.innerHTML = threeMonths.discount[1] ;
-			discount.classList.add('product__card-discount');
+			discount.classList.add('products__card-discount');
 			cardProfit.innerHTML = threeMonths.cardProfit;
 			numberOfPeople(threeMonths);
 			break;
@@ -255,7 +255,7 @@ function handleSelectClick(e) {
 		case sixMonths.amountOfMonth:
 			price.textContent = sixMonths.price[1]
 			discount.innerHTML = sixMonths.discount[1] ;
-			discount.classList.add('product__card-discount');
+			discount.classList.add('products__card-discount');
 			cardProfit.innerHTML = sixMonths.cardProfit;
 			numberOfPeople(sixMonths);
 			break;
@@ -263,7 +263,7 @@ function handleSelectClick(e) {
 		case oneYear.amountOfMonth:
 			price.textContent = oneYear.price[1]
 			discount.innerHTML = '' ;
-			discount.classList.remove('product__card-discount') ;
+			discount.classList.remove('products__card-discount') ;
 			cardProfit.innerHTML = '';
 			numberOfPeople(oneYear);
 			break;
@@ -281,15 +281,15 @@ for (const selected of selectMonth) {
 
 
 // <-- flip product card -->
-const flippedButtonEl = document.querySelector(".flip-button");
+const flippedButtonEl = document.querySelector(".front-button");
 const backButtonEl = document.querySelector(".back-button");
 
 flippedButtonEl.addEventListener("click", function () {
-	this.closest(".product__card-container").classList.toggle("flipped");
+	this.closest(".products__card-container").classList.toggle("flipped");
 });
 
 backButtonEl.addEventListener('click', function ()  {
-	this.closest('.product__card-container').classList.toggle('flipped');
+	this.closest('.products__card-container').classList.toggle('flipped');
 })
 
 // <-- accordion faq -->

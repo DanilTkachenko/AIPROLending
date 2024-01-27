@@ -1,0 +1,159 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--font-body);
+	font-size: var(--font-size-normal);
+	color: var(--color-text);
+	background-color: var(--color-body);
+}
+
+button {
+	font-family: var(--font-body);
+	font-size: var(--font-size-normal);
+	color: var(--color-text);
+	border: none;
+	outline: none;
+}
+
+input {
+	font-family: var(--font-body);
+	font-size: var(--font-size-normal);
+	color: var(--color-text);
+	border: none;
+	outline: none;
+}
+
+select {
+	border: none;
+	outline: none;
+}
+
+h1 {
+	font-family: var(--font-second);
+	color: var(--color-title);
+	font-weight: var(--font-semi-bold);
+}
+
+h2 {
+	font-family: var(--font-second);
+	color: var(--color-title);
+	font-weight: var(--font-semi-bold);
+}
+
+h3 {
+	font-family: var(--font-second);
+	color: var(--color-title);
+	font-weight: var(--font-semi-bold);
+}
+
+h4 {
+	font-family: var(--font-second);
+	color: var(--color-title);
+	font-weight: var(--font-semi-bold);
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+}
+
+::-webkit-scrollbar {
+	width: 0.6rem;
+	border-radius: 0.5rem;
+	background-color: hsl(0, 0%, 10%);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0.5rem;
+	background-color: hsl(0, 0%, 20%);
+
+	&:hover {
+		background-color: hsl(0, 0%, 30%);
+	}
+}
+
+.container {
+	max-width: 1120px;
+	margin-inline: 1.5rem;
+}
+
+.grid {
+	display: grid;
+	gap: 1.5rem;
+}
+
+.section {
+	position: relative;
+	padding-block: 5rem 1rem;
+}
+
+.section__title {
+	margin-bottom: 1rem;
+	font-family: var(--font-second);
+	font-size: var(--font-size-h1);
+	text-align: center;
+
+	span {
+		color: var(--color-main);
+	}
+}
+
+.main {
+	overflow: hidden;
+}
+
+.button {
+	display: inline-block;
+	padding: 1rem 2.5rem;
+	border-radius: 30px;
+	background-color: var(--color-main);
+	color: var(--color-title);
+	font-size: var(--font-size-h3);
+	font-weight: var(--font-medium);
+	transition: transform 0.4s, box-shadow 0.4s;
+
+	&:hover {
+		transform: translateY(-2px);
+		box-shadow: 0 1px 16px hsla(200, 75%, 51%, 0.4);
+	}
+}
+
+.scrollup {
+	position: fixed;
+	bottom: -50%;
+	right: 1rem;
+	display: inline-flex;
+	padding: 6px;
+	background-color: hsla(0, 0%, 100%, 0.1);
+	color: var(--color-title);
+	font-size: 1.25rem;
+	backdrop-filter: blur(24px);
+	-webkit-backdrop-filter: blur(24px);
+	z-index: var(--z-tooltip);
+	transition: bottom 0.4s, transform 0.4s;
+
+	&:hover {
+		transform: translateY(-0.25rem);
+	}
+}
+
+.show-scrollup {
+	bottom: 2rem;
+}

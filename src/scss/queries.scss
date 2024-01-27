@@ -33,64 +33,64 @@
 		top: 11rem;
 		left: 1rem;
 	}
-	.how__container {
+	.instructions__container {
 		grid-template-columns: initial;
 	}
-	.benefit__article {
+	.benefits__article {
 		max-height: 17rem;
 		row-gap: 0.75rem;
 	}
-	.benefit__img {
+	.benefits__img {
 		width: 50px;
 		height: 50px;
 	}
-	.benefit__description {
+	.benefits__description {
 		font-size: var(--font-size-small);
 	}
-	.who__container {
+	.for-whom__container {
 		grid-template-columns: 268px;
 	}
-	.who__img {
+	.for-whom__img {
 		justify-self: center;
 		align-self: center;
 		width: 50px;
 		height: 50px;
 	}
-	.who__img-spring {
+	.for-whom__img-spring {
 		width: 20px;
 		top: 73rem;
 		left: 17rem;
 	}
-	.product__card-container {
-		.product__card-back {
+	.products__card-container {
+		.products__back-card {
 			padding-bottom: 1rem;
 		}
 	}
-	.product__container {
+	.products__container {
 		margin-inline: 1rem;
 	}
-	.product__tabs {
+	.products__tabs {
 		height: 7rem;
 	}
-	.product__tabs-months {
+	.products__tabs-months {
 		li {
 			padding: 0 0.5rem;
 		}
 	}
-	.product__card-discount {
+	.products__card-discount {
 		font-size: var(--font-size-small);
 		font-weight: var(--font-semi-bold);
 	}
-	.card__description {
+	.products__front-description {
 		padding: 0 1rem;
 		font-weight: var(--font-regular);
 	}
-	.card__description-back {
+	.products__back-description {
 		font-size: var(--font-size-smaller);
 		font-weight: var(--font-regular);
 	}
-	.product__card-back {
-		.card__button-main {
+	.products__back-card {
+		.card__products__main-button {
 			font-size: var(--font-size-smaller);
 			text-align: center;
 		}
@@ -123,39 +123,39 @@
 		top: 11rem;
 		left: 4rem;
 	}
-	.how__content {
+	.instructions__content {
 		row-gap: 4rem;
 	}
-	.who__container {
+	.for-whom__container {
 		grid-template-columns: initial;
 		justify-content: initial;
 		row-gap: 3rem;
 	}
-	.who__content {
+	.for-whom__content {
 		grid-template-columns: repeat(2, 1fr);
 		row-gap: 4rem;
 	}
-	.who__item {
+	.for-whom__item {
 		grid-template-rows: 60px auto;
 	}
-	.who__title {
+	.for-whom__title {
 		font-size: var(--font-size-normal);
 	}
-	.who__image {
+	.for-whom__image {
 		width: 30%;
 		grid-column: 1/-1;
 	}
-	.who__img {
+	.for-whom__img {
 		align-self: center;
 	}
-	.product__container {
+	.products__container {
 		margin-inline: 7rem;
 	}
-	.card__description {
+	.products__front-description {
 		font-size: var(--font-size-normal);
 		font-weight: var(--font-medium);
 	}
-	.card__description-back {
+	.products__back-description {
 		font-size: var(--font-size-normal);
 	}
 	.faq__container {
@@ -220,74 +220,74 @@
 		top: 6rem;
 		left: 4rem;
 	}
-	.how__container {
+	.instructions__container {
 		grid-template-columns: initial;
 	}
-	.how__content {
+	.instructions__content {
 		grid-template-columns: repeat(2, 1fr);
 		column-gap: 2rem;
 		row-gap: 3rem;
 	}
-	.how__title {
+	.instructions__title {
 		font-size: var(--font-size-h2);
 	}
-	.how__description {
+	.instructions__description {
 		width: 17rem;
 	}
-	.how__step {
+	.instructions__step {
 		&:nth-child(1) {
-			.how__bg {
+			.instructions__bg {
 				transform: skewY(2deg);
 			}
-			.how__num {
+			.instructions__num {
 				right: initial;
 				left: 1rem;
 			}
 		}
 		&:nth-child(4) {
-			.how__bg {
+			.instructions__bg {
 				transform: skewY(2deg);
 			}
-			.how__num {
+			.instructions__num {
 				left: initial;
 				right: 1rem;
 				top: 1rem;
 			}
 		}
 		&:nth-child(2) {
-			.how__bg {
+			.instructions__bg {
 				transform: skewY(-2deg);
 			}
-			.how__num {
+			.instructions__num {
 				left: initial;
 				right: 1rem;
 			}
 		}
 		&:nth-child(3) {
-			.how__num {
+			.instructions__num {
 				right: initial;
 				left: 1rem;
 				top: 1rem;
 			}
 		}
 	}
-	.benefit__title {
+	.benefits__title {
 		margin: 0.5rem 0 1rem;
 		font-size: var(--font-size-h2);
 	}
-	.benefit__description {
+	.benefits__description {
 		padding: 0 2rem;
 	}
-	.who__container {
+	.for-whom__container {
 		margin-inline: 4rem;
 	}
-	.who__content {
+	.for-whom__content {
 		column-gap: 8rem;
 	}
-	.who__item {
+	.for-whom__item {
 		grid-template-columns: 60px minmax(350px);
 	}
-	.product__container {
+	.products__container {
 		grid-template-columns: 400px;
 		justify-content: center;
 	}
@@ -319,7 +319,7 @@
 		grid-row: 1/2;
 		justify-self: center;
 	}
-	.footer__social {
+	.footer__socials {
 		grid-column: 5/6;
 		grid-row: 1/2;
 		justify-self: flex-end;
@@ -413,30 +413,30 @@
 	.home__img-circle-small {
 		display: none;
 	}
-	.how__step {
+	.instructions__step {
 		padding: 1.5rem 4rem;
 	}
-	.how__num {
+	.instructions__num {
 		font-size: var(--font-size-h1);
 	}
-	.who__content {
+	.for-whom__content {
 		grid-template-columns: 360px 1fr 360px;
 		grid-template-rows: repeat(3, 1fr);
 		column-gap: initial;
 	}
-	.who__image {
+	.for-whom__image {
 		width: 100%;
 		grid-column: 2/3;
 		grid-row: 1/-1;
 		align-self: center;
 	}
-	.who__title {
+	.for-whom__title {
 		font-size: var(--font-size-h3);
 	}
-	.product__card {
+	.products__card {
 		height: 36rem;
 	}
-	.who__img-spring {
+	.for-whom__img-spring {
 		display: none;
 	}
 	.faq__question {
