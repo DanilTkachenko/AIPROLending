@@ -138,21 +138,12 @@ function clearActiveClasses () {
 
 // <-- product card logic -->
 
-<<<<<<< HEAD
 const selectMonth = document.querySelectorAll('.products__tabs-months li');
 const price = document.querySelector('.products__price-currency');
 const discount = document.querySelector('.products__card-discount');
 const cardProfit = document.querySelector('.products__card-profit');
 const cardPeople = document.querySelector('.products__people-select');
 const currency = document.querySelector('.products__tabs-currency');
-=======
-const selectMonth = document.querySelectorAll('.product__tabs-months li');
-const price = document.querySelector('.price__currency');
-const discount = document.querySelector('.product__card-discount');
-const cardProfit = document.querySelector('.product__card-profit');
-const cardPeople = document.querySelector('.card__people-select');
-// const currency = document.querySelector('.product__tabs-currency');
->>>>>>> 24180bb6272e1cdfb94111308b83ea11f7aab376
 
 const monthsSelect = {
 	oneMonth: {
