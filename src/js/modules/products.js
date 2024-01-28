@@ -117,14 +117,17 @@ export function products() {
 		switch (selectedValue) {
 			case '1-2':
 				price.textContent = m.price[0];
+				discount.textContent = m.discount[0] || '';
 				break;
 
 			case '3-4':
 				price.textContent = m.price[1];
+				discount.textContent = m.discount[1] || '';
 				break;
 
 			case '5-9':
 				price.textContent = m.price[2];
+				discount.textContent = m.discount[2] || '';
 				break;
 
 			default:
@@ -140,34 +143,34 @@ export function products() {
 
 		switch (selectData) {
 			case oneMonth.amountOfMonth:
-				price.innerHTML = checkPeople(oneMonth);
 				discount.innerHTML = '';
 				discount.classList.remove('products__card-discount');
 				cardProfit.innerHTML = '';
+				price.innerHTML = checkPeople(oneMonth);
 				numberOfPeople(oneMonth)
 				break;
 
 			case threeMonths.amountOfMonth:
-				price.innerHTML = checkPeople(threeMonths);
 				discount.innerHTML = threeMonths.discount[1];
 				discount.classList.add('products__card-discount');
 				cardProfit.innerHTML = threeMonths.cardProfit;
+				price.innerHTML = checkPeople(threeMonths);
 				numberOfPeople(threeMonths);
 				break;
 
 			case sixMonths.amountOfMonth:
-				price.innerHTML = checkPeople(sixMonths);
 				discount.innerHTML = sixMonths.discount[1];
 				discount.classList.add('products__card-discount');
 				cardProfit.innerHTML = sixMonths.cardProfit;
+				price.innerHTML = checkPeople(sixMonths);
 				numberOfPeople(sixMonths);
 				break;
 
 			case oneYear.amountOfMonth:
-				price.innerHTML = checkPeople(oneYear);
 				discount.innerHTML = '';
 				discount.classList.remove('products__card-discount');
 				cardProfit.innerHTML = '';
+				price.innerHTML = checkPeople(oneYear);
 				numberOfPeople(oneYear)
 				break;
 
