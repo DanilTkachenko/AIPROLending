@@ -1309,22 +1309,19 @@ button.swiper-pagination-bullet {
   transform: translateY(-2px);
   box-shadow: 0 1px 16px hsla(200, 75%, 51%, 0.4);
 }
-
 .nav__img-circle {
   width: 20px;
   position: absolute;
   top: 10rem;
   left: 3rem;
 }
-
 .nav__img-spring {
   width: 30px;
   position: absolute;
   top: 25rem;
   right: 3rem;
 }
-
-.show-menu {
+.nav .show-menu {
   top: 0;
 }
 
