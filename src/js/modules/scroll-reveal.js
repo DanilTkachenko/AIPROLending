@@ -20,14 +20,14 @@ sr.reveal('.home__title', {
 });
 sr.reveal('.home__subtitle', { delay: 600, reset:true});
 sr.reveal('.home__description', {delay: 800, reset:true});
-sr.reveal(document.querySelector('.products__tabs'), {distance: '150%', origin: 'left', duration: 1200, reset:true});
+// sr.reveal(document.querySelector('.products__tabs'), {distance: '150%', origin: 'left', duration: 1200, reset:true});
 
 sr.reveal('.home__img', {interval: 900, duration: 3500, rotate: {x: 25, y: 55 }});
  sr.reveal('.instructions__step', {interval: 500, duration: 1500, delay: 599, reset: true});
  sr.reveal('.benefits__container', { scale: 0.3, duration: 3000, reset:true});
  sr.reveal('.for-whom__item', {interval: 800, duration: 1500, reset:true});
 
- sr.reveal('.products__card-container', {distance: '150%', origin: 'right', duration: 1200, reset:true});
+ sr.reveal(document.querySelectorAll('.products'), {scale: 0.4, rotate: {x: -180, y: 0}, duration: 1500, reset:true});
  sr.reveal('.faq__question', {interval: 900, duration: 1200, reset:true});
 
 
