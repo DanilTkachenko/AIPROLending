@@ -365,7 +365,7 @@
 			color: var(--color-title);
 			font-size: 2rem;
 		}
-	}	
+	}
 }
 
 // for-whom
@@ -485,7 +485,7 @@
 			-moz-appearance: none;
 			appearance: none;
 		}
-	}		
+	}
 
 	&__tabs-months {
 		display: flex;
@@ -598,8 +598,20 @@
 			span {
 				color: hsl(29, 95%, 56%);
 				font-weight: var(--font-medium);
-				text-decoration: line-through;
-			}
+					text-decoration: none;
+					position: relative;
+					&:before {
+						content: " ";
+						display: block;
+						width: 100%;
+						border-top: 3px solid hsl(29, 95%, 56%);
+						height: 12px;
+						position: absolute;
+						bottom: -2px;
+						left: 0;
+						transform: rotate(-9deg);
+					}
+				}
 		}
 	}
 
@@ -656,7 +668,7 @@
 				font-weight: var(--font-semi-bold);
 			}
 		}
-	
+
 		&-month {
 			font-size: var(--font-size-small);
 			font-weight: var(--font-regular);
@@ -760,11 +772,11 @@
 			justify-content: space-between;
 			align-items: center;
 			border-bottom: 2px solid var(--color-title);
-	
+
 			.products__table-title {
 				font-weight: var(--font-semi-bold);
 			}
-	
+
 			.products__table-value {
 				width: 3.2rem;
 				border-top-left-radius: 100px;

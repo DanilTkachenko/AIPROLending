@@ -1712,7 +1712,19 @@ button.swiper-pagination-bullet {
 .products__card-profit span {
   color: hsl(29, 95%, 56%);
   font-weight: var(--font-medium);
-  text-decoration: line-through;
+  text-decoration: none;
+  position: relative;
+}
+.products__card-profit span:before {
+  content: " ";
+  display: block;
+  width: 100%;
+  border-top: 3px solid hsl(29, 95%, 56%);
+  height: 12px;
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  transform: rotate(-9deg);
 }
 .products__front-card {
   height: 100%;
