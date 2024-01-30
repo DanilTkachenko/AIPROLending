@@ -27,9 +27,6 @@ sr.reveal('.home__img', {rotate: {x: -50, y: 220 },  distance: '105%', origin: '
  sr.reveal('.benefits__container', {distance: '150%', origin: 'left', duration: 1200, reset:true});
  sr.reveal('.for-whom__item', {interval: 600, duration: 1500, reset:true});
 
- sr.reveal(document.querySelectorAll('.products'), {scale: 1, rotate: {x: -180, y: 0}, duration: 1500, reset:true});
+ sr.reveal(document.querySelectorAll('.products'), {duration: 2000, reset:true});
  sr.reveal('.faq__question', {interval: 600, duration: 1200, reset:true});
-
-
- 
 };

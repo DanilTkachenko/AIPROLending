@@ -90,7 +90,7 @@
 		font-weight: var(--font-regular);
 	}
 	.products__back-card {
-		.card__products__main-button {
+		.products__main-button {
 			font-size: var(--font-size-smaller);
 			text-align: center;
 		}
@@ -99,15 +99,13 @@
 		grid-template-columns: initial;
 		margin-inline: 1rem;
 	}
-	.faq__question {
-		label {
-			height: 5rem;
-		}
-		.collapsible {
-			padding: 0 0.5rem;
-		}
+	.faq__question-head {
+		height: 5rem;
 	}
-	.question__answer {
+	.faq__question-body {
+		padding: 0 0.5rem;
+	}
+	.faq__question-answer {
 		font-size: var(--font-size-small);
 		font-weight: var(--font-semi-bold);
 	}
@@ -162,12 +160,7 @@
 		grid-template-columns: 500px;
 		margin-inline: 1rem;
 	}
-	.faq__question {
-		label {
-			height: 4rem;
-		}
-	}
-	.question__answer {
+	.faq__question-answer {
 		font-size: var(--font-size-small);
 		font-weight: var(--font-semi-bold);
 	}
@@ -294,15 +287,10 @@
 	.faq__container {
 		grid-template-columns: 700px;
 	}
-	.faq__question {
-		label {
-			height: 5rem;
-		}
-	}
 	.faq__question-title {
 		font-size: var(--font-size-h2);
 	}
-	.question__answer {
+	.faq__question-answer {
 		font-size: var(--font-size-normal);
 		font-weight: var(--font-semi-bold);
 	}
@@ -439,26 +427,14 @@
 	.for-whom__img-spring {
 		display: none;
 	}
-	.faq__question {
-		label {
-			height: 7rem;
-			column-gap: 1.5rem;
-			padding: 0 3rem;
-		}
+	.faq__question-head {
+		height: 7rem;
+		column-gap: 1.5rem;
+		padding: 0 3rem;
 	}
-	.question__answer {
+	.faq__question-answer {
 		font-size: var(--font-size-h3);
 		text-align: initial;
-	}
-	input[name="question"] {
-		&:checked {
-			+ {
-				.collapsible {
-					height: 7rem;
-					padding: 0 3rem;
-				}
-			}
-		}
 	}
 }
 @media screen and (min-width: 1440px) {

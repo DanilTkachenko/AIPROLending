@@ -16,3 +16,6 @@ swiper();
 
 import { products } from "./modules/products.js";
 products();
+
+import { questions } from "./modules/questions.js";
+questions();

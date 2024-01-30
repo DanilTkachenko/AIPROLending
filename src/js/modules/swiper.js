@@ -9,11 +9,15 @@ export function swiper() {
 		spaceBetween: 30,
 		centeredSlides: true,
 
+		autoplay: {
+			delay: 5000,
+		},
+
 		navigation: {
 			nextEl: ".swiper-button-next",
 			prevEl: ".swiper-button-prev",
 		},
-		
+
 		breakpoints: {
 			768: {
 				slidesPerView: 2,
@@ -25,8 +29,4 @@ export function swiper() {
 			},
 		},
 	});
-	// Свайпає кожні 5000мс
-	const swiperInterval = setInterval(() => {
-		swiperBenefits.slideNext();
-	}, 5000);
 }
